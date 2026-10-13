@@ -1,0 +1,42 @@
+
+### 1. Test create task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "title": "Write code with Mongoose"
+}
+
+### 2. Test get all tasks (copy the _id from here)
+GET http://localhost:3000/tasks
+
+### 3. Test update task (append the _id to the URL)
+PUT http://localhost:3000/tasks/your_task_id_here
+
+### 4. Test delete task (append the _id to the URL)
+DELETE http://localhost:3000/tasks/6ac877d7232b073696a743a0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhY2UxMmZlYzE0MTJjNWUyZjE5YzFkNiIsImlhdCI6MTc5MTg5MDE3OSwiZXhwIjoxNzkxODkzNzc5fQ.RIvCtBVO-Cg0EUXirPRv1fc6EzewjLoPrnKhpn4l7Es
+
+### 15. Send DELETE request with a valid JWT token
+DELETE http://localhost:3000/tasks/your_task_id_here
+Authorization: Bearer <copy_token_here>
+
+### 11. Register user in test.http
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password123"
+}
+
+### 12. Login user in test.http
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password123"
+}
+
+// Note: Copy the token from the login response and paste it here before sending the DELETE request
